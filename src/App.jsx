@@ -5,6 +5,7 @@ import {
   Job,
   JobListing,
   LandingPage,
+  MyJobs,
   Onboarding,
   PostJob,
   SavedJobs,
@@ -39,6 +40,10 @@ const router = createBrowserRouter([
         path: "/saved-jobs",
         element: <SavedJobs />,
       },
+      {
+        path: "/my-jobs",
+        element: <MyJobs/>
+      }
     ],
   },
 ]);
