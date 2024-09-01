@@ -25,7 +25,7 @@ const router = createBrowserRouter([
         path: "/onboarding",
         element: (
           <ProtectedRoute>
-            <Onboarding />,
+            <Onboarding />
           </ProtectedRoute>
         ),
       },
@@ -33,7 +33,7 @@ const router = createBrowserRouter([
         path: "/jobs",
         element: (
           <ProtectedRoute>
-            <JobListing />,
+            <JobListing />
           </ProtectedRoute>
         ),
       },
@@ -41,7 +41,7 @@ const router = createBrowserRouter([
         path: "/job/:id",
         element: (
           <ProtectedRoute>
-            <Job />,
+            <Job />
           </ProtectedRoute>
         ),
       },
@@ -49,7 +49,7 @@ const router = createBrowserRouter([
         path: "/post-job",
         element: (
           <ProtectedRoute>
-            <PostJob />,
+            <PostJob />
           </ProtectedRoute>
         ),
       },
@@ -57,7 +57,7 @@ const router = createBrowserRouter([
         path: "/saved-jobs",
         element: (
           <ProtectedRoute>
-            <SavedJobs />,
+            <SavedJobs />
           </ProtectedRoute>
         ),
       },
@@ -65,7 +65,7 @@ const router = createBrowserRouter([
         path: "/my-jobs",
         element: (
           <ProtectedRoute>
-            <MyJobs />,
+            <MyJobs />
           </ProtectedRoute>
         ),
       },
