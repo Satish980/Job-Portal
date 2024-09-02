@@ -40,6 +40,7 @@ export async function saveJob(token, { alreadySaved }, saveData) {
 
     if (deleteError) {
       console.log("Error in deleting job::", deleteError);
+      return null;
     }
 
     return data;
@@ -51,6 +52,7 @@ export async function saveJob(token, { alreadySaved }, saveData) {
 
     if (insertionError) {
       console.log("Error in insertion of jobs:: ", insertionError);
+      return null;
     }
 
     return data;
