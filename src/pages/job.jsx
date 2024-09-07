@@ -13,6 +13,8 @@ import {
   SelectTrigger,
   SelectValue,
 } from "@/components/ui/select";
+import ApplyJobDrawer from "@/components/apply-job";
+import ApplicationCard from "@/components/application-card";
 
 const Job = () => {
   const { isLoaded, user } = useUser();
@@ -89,7 +91,7 @@ const Job = () => {
       {loadingHiringStatus && (
         <BarLoader className="mb-4" width="100%" color="#36d7b7" />
       )}
-      {jobData?.recruiter_id !== user?.id && (
+      {jobData?.recruiter_id === user?.id && (
         <Select onValueChange={handleStatusChange}>
           <SelectTrigger
             className={`w-full ${
@@ -121,7 +123,28 @@ const Job = () => {
         className="bg-transparent sm:text-lg"
       />
 
+      {jobData?.recruiter_id !== user?.id && (
+        <>
+          <ApplyJobDrawer
+            job={jobData}
+            user={user}
+            fetchJob={fnJob}
+            applied={jobData?.applications.find(
+              (application) => application.candidate_id === user.id
+            )}
+          />
+        </>
+      )}
+
       {/* render applications */}
+      {jobData?.applications?.length && jobData?.recruiter_id !== user?.id && (
+        <div className="flex flex-col gap-2">
+          <h2 className="text-2xl sm:text-3xl font-bold">Applications</h2>
+          {jobData?.applications?.map((application) => {
+            return <ApplicationCard key={application.id} application={application}/>
+          })}
+        </div>
+      )}
     </div>
   );
 };
