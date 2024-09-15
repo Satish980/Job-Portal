@@ -54,7 +54,7 @@ const LandingPage = () => {
       {/* carousel */}
 
       <Carousel
-        className="w-full py-10"
+        className="w-full py-10 -z-10"
         plugins={[Autoplay({ delay: 2000, stopOnInteraction: true })]}
       >
         <CarouselContent className="flex gap-5 lg:gap-20 items-center">
@@ -102,7 +102,7 @@ const LandingPage = () => {
       <Accordion type="single" collapsible>
         {faqs.map(({ question, answer }, index) => {
           return (
-            <AccordionItem value={`item-${index+1}`} key={index}>
+            <AccordionItem value={`item-${index + 1}`} key={index}>
               <AccordionTrigger>{question}</AccordionTrigger>
               <AccordionContent>{answer}</AccordionContent>
             </AccordionItem>
