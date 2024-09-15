@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import { BarLoader } from "react-spinners";
 import { useUser } from "@clerk/clerk-react";
 
-import { getJobs } from "@/api/apiJob";
+import { getJobs } from "@/api/apiJobs";
 import useFetch from "@/hooks/use-fetch";
 import JobCard from "@/components/job-card";
 import { getCompanies } from "@/api/apiCompanies";

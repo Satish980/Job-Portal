@@ -20,7 +20,7 @@ import { BarLoader } from "react-spinners";
 import { Navigate, useNavigate } from "react-router-dom";
 import MDEditor from "@uiw/react-md-editor";
 import { Button } from "@/components/ui/button";
-import { addNewJob } from "@/api/apiJob";
+import { addNewJob } from "@/api/apiJobs";
 import AddCompanyDrawer from "@/components/add-company-drawer";
 
 const schema = z.object({

@@ -12,7 +12,7 @@ import { Button } from "./ui/button";
 import { Link } from "react-router-dom";
 
 import useFetch from "@/hooks/use-fetch";
-import { saveJob } from "@/api/apiJob";
+import { saveJob } from "@/api/apiJobs";
 
 const JobCard = ({
   job,
