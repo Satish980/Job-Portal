@@ -96,3 +96,17 @@ export async function updateHiringStatus(token, { job_id }, is_open) {
 
   return data;
 }
+
+export async function addNewJob(token, _, jobData) {
+  const supabase = await supabaseClient(token);
+
+  let query = supabase.from("jobs").insert([jobData]).select();
+
+  const { data, error } = await query;
+  if (error) {
+    console.log("Error in adding new job:: ", error);
+    return null;
+  }
+
+  return data;
+}

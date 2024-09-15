@@ -137,7 +137,7 @@ const Job = () => {
       )}
 
       {/* render applications */}
-      {jobData?.applications?.length && jobData?.recruiter_id !== user?.id && (
+      {!jobData?.applications?.length && jobData?.recruiter_id !== user?.id && (
         <div className="flex flex-col gap-2">
           <h2 className="text-2xl sm:text-3xl font-bold">Applications</h2>
           {jobData?.applications?.map((application) => {
